@@ -57,3 +57,28 @@ print(f'fora da função: {lista}')
 
 lista = list(map(lambda x: x*2, lista))
 print(f'Após usar o lambda: {lista}')
+
+# Parametros opcionais
+
+def somar(a, b, c = 0):
+    a = 8
+    s = a + b + c
+    print(f'Soma = {s}')
+a = 5
+somar(a,2)
+print(a)
+# Aatribuir 0 ao parametro da função dizemos que ele é opcional
+# A variável a mesmo sendo global não muda de valor
+# Isso porque o a da função somar é uma variável diferente não a mesma
+# para usar o a global é só colocar a palavra global ao lado do a:
+
+def soma2():
+    global d
+    d = 10
+
+    print(f'd como global na função soma 2 {d}')
+
+d = 6
+print(f'd na main: {d}')
+soma2()
+print(f'd na main denovo {d}')
